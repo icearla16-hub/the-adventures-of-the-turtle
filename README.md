@@ -3,7 +3,8 @@
 Our project is along the lines of a personality test (for fun, neither scientific nor pseudoscientific), likely paired with a Turtle or some kind of visual (ideally interactive?) aspect. Basically, a user can maneuver through a Turtle screen and answer questions that guide their path towards an end result. Based on the result they end up at, they're told some conclusion about their personality!
 
 2 a, b, c. For each of three functions, a very brief (1-2 sentences) description of what the function will do.
-- read the text file, assign the results to each of the functions
+(seperate functions - quiz, interactive function - turtle) 
+- read the text file, assign the results to each of the functions. 
 - the turtle: the turtle moves in response to the input from the user. The turtle would either stay on the route that its going on, or a different direction, depending on the choice of a, b, or c. - a, b, and c are different objects
 - user will have a choice of a, b, c. Depending on which choice you choose the most, you are assigned to a certain personality type.
 3. If you are doing a group project, the list of group members with both their real names and Github usernames.
