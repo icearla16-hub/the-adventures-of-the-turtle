@@ -1,11 +1,14 @@
 1. A brief (3-5 sentences) description of your planned project
    Our planned project 
 2 a, b, c. For each of three functions, a very brief (1-2 sentences) description of what the function will do.
+- read the text file, assign the results to each of the functions
+- the turtle: the turtle moves in response to the input from the user. The turtle would either stay on the route that its going on, or a different direction, depending on the choice of a, b, or c. - a, b, and c are different objects
+- user will have a choice of a, b, c. Depending on which choice you choose the most, you are assigned to a certain personality type.
 3. If you are doing a group project, the list of group members with both their real names and Github usernames.
   Akhila: icearla16-hub, Nora: noralz2 Andrea: andrealo2432
 4 a & b.If you are doing a group project, very brief statements (1-2 sentences each) describing:
 How work will be divided (assigned and tracked) among group members, and;
-  Work will be divided by
+  Work will be divided by 
 How (and how often!) team members will communicate with each other about the project (such as weekly meetings, ongoing group chat, etc.)
    We have a group chat with each other to communicate with each other, and we would do weekly checkups. 
 
