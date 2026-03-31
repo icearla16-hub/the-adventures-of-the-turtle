@@ -30,5 +30,5 @@ Akhila: icearla16-hub, Nora: noralz2, Andrea: andrealo2432
   - Nora: The turtle, and how it is able to move around, incorporating user input.
   - Akhila: Based on the user input (ie. which object they choose), they turn a specific direction; In addition, the question asked for the person to decide which object they would like to choose (a text file).
   - Andrea: Visuals, math/tally of each of the chosen objects
-How (and how often!) team members will communicate with each other about the project (such as weekly meetings, ongoing group chat, etc.)
-   We have a group chat with each other to communicate with each other, and we would do weekly checkups.
+
+How we are communicating: We have a group chat with each other to communicate with each other, and we would do weekly checkups.
