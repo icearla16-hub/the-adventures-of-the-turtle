@@ -13,7 +13,7 @@ Our project is along the lines of a personality test (for fun, neither scientifi
 
 ### Personality traits assigned depending on which choice is chosen the most
 
-A - Despite the possibility of being harmed, you always choose to help
+A - Despite the possibility of being harmed, you always choose to help.
 
 B - You are a practical person who chooses to help when it does not hurt you, but you won't go out of the way to help.
 
