@@ -9,6 +9,11 @@ Our project is along the lines of a personality test (for fun, neither scientifi
 - the turtle: the turtle moves in response to the input from the user. The turtle would either stay on the route that its going on, or a different direction, depending on the choice of a, b, or c. - a, b, and c are different objects
 - user will have a choice of a, b, c. Depending on which choice you choose the most, you are assigned to a certain personality type.
 
+A: despite the possibility of being harmed, you always chose to help
+B: you are a practical person who chooses to help when it doesn’t hurt you, but won’t go out of your way to 
+C: You are a focused person, reliant on only your skills to reach your goals
+
+
 # Group Members + Github Usernames
 
   Akhila: icearla16-hub
