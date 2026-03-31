@@ -1,10 +1,9 @@
 # The Adventures of the Turtle
-_What was that noise?_
+___What was that noise?___
 
 _You whip your head around, anxiously scanning the trees for whomever just snapped that twig. You quickly weigh your options: make a run for it, pick a fight, or freeze until the threat reveals itself—_
 
 _—as a bunny. It's casually chewing on a piece of grass, looking so unbothered that you almost feel like it's mocking you. With a sigh of relief, you pick up your pace once more._
-
 
 You're on the run after stealing the local dictatorship's crown jewels. As the guards close in behind you, there's only one thing standing between you and freedom: the infamous forest surrounding the kingdom. Make it through, and you're home free—the jewels are enough to pay your debts and establish the life of your dreams. Get caught, however, and the rest of your days become a nightmare. With only your wits to guide you, what will your fate be?
 
@@ -12,17 +11,19 @@ You're on the run after stealing the local dictatorship's crown jewels. As the g
 Our project is a choose-your-own-adventure personality test. Users face situations within the storyline, and their decisions inform the path they take through the forest, culminating in a unique ending that reveals something about their personality.
 
 ## Function Descriptions
-Functions will cover three domains: making the Tkinter display, reading and displaying text from separate files, and interpreting user inputs to shape their ending.
+Functions will cover three major domains: making the Tkinter display, reading and displaying text from separate files, and interpreting user inputs to shape their ending.
 
 ### 1. Making the Tkinter display
-Establish a class `Display` with the following methods:
+NOTE: see Lab 7 for reference
+Establish a class `Display` with the following methods):
 - \_\_init\_\_(): Creates a Tkinter window. Calls the following methods.
 - init_window(): Initializes window. Accounts for window name, screen size, and frame sizes.
 - create_turtle_frame(): Adds frame that holds a canvas with a Turtle.
 - create_interface_frame(): Adds frame with buttons for user to interact with. Calls functions that will read and display text (questions and answer options).
  
 ### 2. Reading and displaying text from separate files
-Use .csv or .txt files: one for questions, one for answer options. The answer options will likely be formatted as follows:
+NOTE: see Homework 3 for reference
+Use .csv or .txt files; one file for questions, one for answer options. The answer options will likely be formatted as follows:
 
     OPTION, a  
     OPTION, b  
@@ -30,18 +31,15 @@ Use .csv or .txt files: one for questions, one for answer options. The answer op
 
 to allow for easy tallying of the user's responses. If the user chooses mostly a's, they receive end result A, and so on (see below).
 
-A - Despite the possibility of being harmed, you always choose to help.
+- A - Despite the possibility of being harmed, you always choose to help.
+- B - You are a practical person who chooses to help when it does not hurt you, but you won't go out of your way to help.
+- C - You are a focused person, reliant on only your skills to reach your goals.
 
-B - You are a practical person who chooses to help when it does not hurt you, but you won't go out of the way to help.
-
-C - You are a focused person, reliant on only your skills to reach your goals.
-
-(separate functions - quiz, interactive function - turtle) 
-- read the text file, assign the results to each of the functions. 
-- the turtle: the turtle moves in response to the input from the user. The turtle would either stay on the route that its going on, or a different direction, depending on the choice of a, b, or c. - a, b, and c are different objects
-- user will have a choice of a, b, c. Depending on which choice you choose the most, you are assigned to a certain personality type.
-
-
+This will require the following functions:
+- Read the questions file. Display questions one-at-a-time when prompted.
+- Read the answer options file. Display answer options either on or above buttons in the interface frame, but do not indicate a, b, or c (those are just for our organization).
+- Add user responses to a .csv or list. Loop through and find the mode, which will determine the final outcome.
+- Display the user's final outcome.
 
 ## Group Members + Github Usernames
 
