@@ -10,7 +10,9 @@ Our project is along the lines of a personality test (for fun, neither scientifi
 - user will have a choice of a, b, c. Depending on which choice you choose the most, you are assigned to a certain personality type.
 
 A: despite the possibility of being harmed, you always chose to help
+
 B: you are a practical person who chooses to help when it doesn’t hurt you, but won’t go out of your way to 
+
 C: You are a focused person, reliant on only your skills to reach your goals
 
 
