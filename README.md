@@ -34,7 +34,7 @@ If we want to add complexity, we can make the Turtle's next move dependent on th
 ### 3. Reading and displaying text from separate files, handling user inputs
 > NOTE: Homework 3 may be a helpful reference
 
-Use .csv or .txt files; one file for questions, one for answer options. The answer options will likely be formatted as follows:
+Import questions and answer options, likely in .txt and .csv format, respectively. The answer options will be formatted as follows:
 
     OPTION,a  
     OPTION,b  
