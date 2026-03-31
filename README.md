@@ -1,11 +1,25 @@
 # The Adventures of the Turtle
-You're on the run after stealing the local dictatorship's crown jewels. As the guards close in behind you, there's only one thing standing between you and freedom: the infamous forest surrounding the kingdom. Make it through, and you're home free—the jewels are enough to pay off your debts and establish the life of your dreams. Get caught, however, and the rest of your days become a nightmare. With only your wits to guide you, what will your fate be?
+_What was that noise?_
+
+_You whip your head around, anxiously scanning the trees for whomever just snapped that twig. You quickly weigh your options: make a run for it, pick a fight, or freeze until the threat reveals itself—_
+
+_—as a bunny. It's chewing on a piece of grass, looking so unbothered that you almost feel like it's mocking you. With a sigh of relief, you pick up your pace once more._
+
+You're on the run after stealing the local dictatorship's crown jewels. As the guards close in behind you, there's only one thing standing between you and freedom: the infamous forest surrounding the kingdom. Make it through, and you're home free—the jewels are enough to pay your debts and establish the life of your dreams. Get caught, however, and the rest of your days become a nightmare. With only your wits to guide you, what will your fate be?
 
 ## What is our project about?
 
 Our project is a choose-your-own-adventure personality test. Users face situations within the storyline, and their decisions inform the path they take through the forest, culminating in a unique ending that reveals something about their personality.
 
 ## Function Descriptions
+Functions will cover three domains: making the Tkinter display, showing questions and options from a .csv, and interpreting user inputs to shape their ending.
+
+### 1. Making the Tkinter display
+- Establish a class `Display` with the following methods:
+  - __init__(self): Creates a Tkinter window. Calls the following methods.
+  - init_window(self): Initializes window. Accounts for window name, screen size, and frame sizes.
+  - create_turtle_frame: Adds frame that holds a canvas with a Turtle.
+  - create_interface_frame: Adds frame that will display text (questions) and buttons for user to press (answer options).
 
 (seperate functions - quiz, interactive function - turtle) 
 - read the text file, assign the results to each of the functions. 
