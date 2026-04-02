@@ -13,6 +13,13 @@ Our project is a choose-your-own-adventure personality test. Users face situatio
 ## Function Descriptions
 Functions will cover three major domains: making the Tkinter display, controlling the Turtle within the Tkinter window, and handling files with questions, answer options, and user data. Each of these domains will likely have their own folder within the project directory for modularity.
 
+- 'survey.py'
+  - 
+- trtle.py
+- instructions.txt
+- questions.txt
+- counting.py
+
 ### 1. Making the Tkinter display
 > NOTE: Lab 7 may be a helpful reference
 
