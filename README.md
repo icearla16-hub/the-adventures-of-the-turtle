@@ -22,7 +22,7 @@ Our project is a choose-your-own-adventure personality test. Users face situatio
 	•	c: you leave the wolf alone because it might attack you, especially because it is injured
 3. Knowing you are running low on food and water, you run into a group of animals offering food and water. However, there is a catch: you have to give up something of yours. will you...
   •	a: give up your knife, knowing that would be your choice of a weapon in the future
-	• b: offer your shield and take their food, knowing that the chances of you using the shield are low anyway
+	• b: offer your shield and take their food, knowing that the chances of you using the shield are anyway
 	•	c: take their food and run, knowing this is your only chance for sustenance and not facing consequences
 4. Suddenly, there is a rabbit in front of you asking for help. Do you...
   •	a: You can help them and delay your travels
@@ -96,7 +96,7 @@ This will require the following functions:
 
 ## Testing
 
-Throughout the game, the user should be able to see a turtle, that is appearing to go through a forest. As the turtle reaches certain parts of the forest, it should be stopped, and given the choice between three choices, and should be able to smootly pick between the three choices. This should happen seven times throughout the game, and at the very end, the user should be shown a conclusion of which personality their choices line up with depending on their choices throughout the game.
+Throughout the game, the user should be able to see a turtle, that is appearing to go through a forest. As the turtle reaches certain parts of the forest, it should be stopped, and given the choice between three choices, and should be able to smootly pick between the three choices. This should happen eight times throughout the game, and at the very end, the user should be shown a conclusion of which personality their choices line up with depending on their choices throughout the game.
 
 ## Group Members + Github Usernames
 
