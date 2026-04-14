@@ -13,7 +13,6 @@ def get_question(question_file):
 
 def ask_question(question):
     possible_answers = ()
-    print("")
     return True
 
 if __name__ == "__main__":
