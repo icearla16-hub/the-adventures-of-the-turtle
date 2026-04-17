@@ -1,5 +1,3 @@
-import tkinter as tk
-import turtle
 from display import Display
 
 
