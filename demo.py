@@ -25,6 +25,30 @@ class Display:
         )
         self.interface_frame.grid(row=1, column=0)
 
+        self.a = tk.Button(
+            self.interface_frame,
+            text="Option A",
+            font="Garamond 12",
+            command=self.move_left,
+        )
+        self.a.grid(row=0, column=0)
+
+        self.b = tk.Button(
+            self.interface_frame,
+            text="Option B",
+            font="Garamond 12",
+            command=self.move_forward,
+        )
+        self.b.grid(row=0, column=1)
+
+        self.c = tk.Button(
+            self.interface_frame,
+            text="Option C",
+            font="Garamond 12",
+            command=self.move_right,
+        )
+        self.c.grid(row=0, column=2)
+
     def create_turtle_frame(self):
         self.turtle_frame_height = self.screen_size[1] - self.interface_frame_height
         self.turtle_frame_width = self.screen_size[0]
@@ -42,22 +66,41 @@ class Display:
             height=self.turtle_frame_height,
         )
         self.action_canvas.pack()
-        t = turtle.RawTurtle(self.action_canvas)
-        return t
+        # return self.action_canvas, my_turtle
+
+        self.turtle_screen = turtle.TurtleScreen(self.action_canvas)
+        self.t = turtle.RawTurtle(self.turtle_screen)
+        return self.t
+
+    def move_left(self):
+        self.t.left(90)
+        self.t.forward(10)
+
+    def move_right(self):
+        self.t.right(90)
+        self.t.forward(10)
+
+    def move_forward(self):
+        self.t.forward(10)
+
+    def connect_keys(self):
+        self.turtle_screen.onkey(
+            self.move_left, "Left"
+        )  # Press Left arrow to move left
+        self.turtle_screen.onkey(
+            self.move_right, "Right"
+        )  # Press Right arrow to move right
+        self.turtle_screen.onkey(
+            self.move_forward, "Up"
+        )  # Press Up arrow to move forward
+        self.turtle_screen.listen()
 
 
-def move_left(t):
-    t.left(90)
-    t.forward(10)
-
-
-def move_right(self):
-    self.right(90)
-    self.forward(10)
-
-
-def move_forward(self):
-    self.forward(10)
+# # Assign keys to functions
+# self.action_canvas.onkey(move_left, "Left")  # Press Left arrow to move left
+# self.action_canvas.onkey(move_right, "Right")  # Press Right arrow to move right
+# self.action_canvas.onkey(move_forward, "Up")  # Press Up arrow to move forward
+# self.action_canvas.listen()
 
 
 def main():
@@ -88,11 +131,5 @@ if __name__ == "__main__":
 # def move_forward():
 #     t.forward(10)
 
-
-# # Assign keys to functions
-# screen.onkey(move_left, "Left")  # Press Left arrow to move left
-# screen.onkey(move_right, "Right")  # Press Right arrow to move right
-# screen.onkey(move_forward, "Up")  # Press Up arrow to move forward
-# screen.listen()
 
 # screen.mainloop()
