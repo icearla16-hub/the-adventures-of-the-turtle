@@ -70,15 +70,17 @@ class Display:
 
         self.turtle_screen = turtle.TurtleScreen(self.action_canvas)
         self.t = turtle.RawTurtle(self.turtle_screen)
-        return self.t
+        self.t.setheading(90)
 
     def move_left(self):
         self.t.left(90)
         self.t.forward(10)
+        self.t.right(90)
 
     def move_right(self):
         self.t.right(90)
         self.t.forward(10)
+        self.t.left(90)
 
     def move_forward(self):
         self.t.forward(10)
