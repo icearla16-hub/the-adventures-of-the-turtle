@@ -12,9 +12,12 @@ def get_question(question_file):
     return question_list
 
 def ask_question(question):
-    possible_answers = ()
-    return True
+    print(question[0])
+    return input("Enter your answer (a/b/c): ")
 
 if __name__ == "__main__":
     main()
     #answer options to csv and questions from question.text
+
+def calulate_score(response_txt):
+    
