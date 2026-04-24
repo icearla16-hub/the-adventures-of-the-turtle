@@ -1,6 +1,6 @@
 import tkinter as tk
 import turtle
-
+from survey import save_answers
 
 class Display:
     def __init__(self):
