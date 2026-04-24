@@ -1,6 +1,8 @@
 # Constants
 question_file = "questions.txt"
 
+# Imports
+import tkinter as tk
 
 def get_question(question_file):
     question_list = []
@@ -16,13 +18,14 @@ def get_question(question_file):
 def ask_question(question):
     print(question[0])
     return input("Enter your answer (a/b/c): ")
-
+    # make this a button (?)
 
 def calculate_score(response_txt):
     pass
 
 
 def main():
+    get_question(question_file)
     return True
 
 
