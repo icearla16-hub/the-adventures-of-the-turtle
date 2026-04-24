@@ -20,11 +20,9 @@ def ask_question(question):
     print(question[0])
     return input("Select your answer: ")
 
-# def calculate_score(response_txt):
-#    pass
-
-def save_answers():
+def save_answers(answer):
     answer_list = []
+    answer_list.append(answer)
 
 def main():
     get_question(question_file)

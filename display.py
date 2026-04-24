@@ -77,14 +77,17 @@ class Display:
         self.t.left(90)
         self.t.forward(10)
         self.t.right(90)
+        save_answers("A")
 
     def move_right(self):
         self.t.right(90)
         self.t.forward(10)
         self.t.left(90)
+        save_answers("C")
 
     def move_forward(self):
         self.t.forward(10)
+        save_answers("B")
 
     def connect_keys(self):
         self.turtle_screen.onkey(
