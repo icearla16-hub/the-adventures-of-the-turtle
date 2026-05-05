@@ -27,8 +27,8 @@ def save_answers(answer):
         file.write(f"{answer}\n")
 
 def main():
-    get_question(question_file)
-    return True
+    question_list = get_question(question_file)
+    ask_question(question_list)
 
 
 if __name__ == "__main__":
