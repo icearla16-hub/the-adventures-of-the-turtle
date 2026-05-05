@@ -24,7 +24,7 @@ def ask_question(question_list):
 
 def save_answers(answer):
     with open(answer_file, "a") as file:
-        file.write(answer)
+        file.write(f"{answer}\n")
 
 def main():
     get_question(question_file)
