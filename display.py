@@ -2,6 +2,7 @@ import tkinter as tk
 import turtle
 from survey import save_answers
 
+
 class Display:
     def __init__(self):
         self.root = tk.Tk()
@@ -21,7 +22,6 @@ class Display:
             self.root,
             width=self.screen_size[0],
             height=self.interface_frame_height,
-            bg="magenta",
         )
         self.interface_frame.grid(row=1, column=0)
 
@@ -66,9 +66,10 @@ class Display:
             height=self.turtle_frame_height,
         )
         self.action_canvas.pack()
-
         self.turtle_screen = turtle.TurtleScreen(self.action_canvas)
+        self.turtle_screen.bgcolor("DarkGreen")
         self.t = turtle.RawTurtle(self.turtle_screen)
+
         self.t.setheading(90)
         self.t.penup()
         self.t.setpos(0, -0.4 * (self.turtle_frame_height))
