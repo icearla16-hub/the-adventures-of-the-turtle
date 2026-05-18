@@ -20,37 +20,7 @@ def get_answer_options(answer_options_file):
     return answer_options_list
 
 
-def ask_question(question_list, answer_options_list):
-    for i in range(len(question_list)):
-        print(question_list[i])
-        print(answer_options_list[i])
-        response = input(str("Select your answer: "))
-        if response not in ["A", "B", "C"]:
-            raise ValueError("Please enter 'A', 'B', or 'C'.")
-        return response
-
-
 # saving the answers to responses.txt
 def save_answers(response):
     with open(response_file, "a") as file:
         file.write(f"{response}\n")
-
-
-# putting it all together
-def main():
-    for i in range(len(question_file)):
-        question_list = get_question(question_file)
-        answer_options_list = get_answer_options(answer_options_file)
-        for i in range(
-            len(question_list)
-        ):  # printing one question + row of answer choices at a time
-            print(question_list[i])
-            print(answer_options_list[i])
-            response = input(str("Select your answer: "))
-            if response not in ["A", "B", "C"]:
-                raise ValueError("Please enter 'A', 'B', or 'C'.")
-        return response
-
-
-if __name__ == "__main__":
-    main()

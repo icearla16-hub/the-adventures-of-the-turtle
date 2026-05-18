@@ -1,10 +1,10 @@
 import tkinter as tk
 import turtle
-from survey import *
+from survey import get_question, get_answer_options, save_answers
 from counting import results
 
 question_file = "questions.txt"
-answer_options = "answer_options.csv"
+answer_options_file = "answer_options.csv"
 answer_file = "responses.txt"
 
 question_list = get_question(question_file)
@@ -23,12 +23,12 @@ class Display:
 
     def init_window(self):
         self.root.title("The Adventures of the Turtle")
-        self.screen_size = (800, 600)
+        self.screen_size = (1000, 1000)
         self.root.geometry(f"{self.screen_size[0]}x{self.screen_size[1]}")
 
     def create_interface_frame(self):
         self.interface_frame = tk.Frame(
-            self.root, width=self.screen_size[0], height=(0.25 * self.screen_size[1])
+            self.root, width=800, height=(0.25 * self.screen_size[1])
         )
         self.interface_frame.grid(row = 1, column = 0)
 
@@ -88,13 +88,14 @@ class Display:
             width=self.turtle_frame_width,
             height=self.turtle_frame_height,
         )
+
         self.turtle_frame.grid(row=0, column=0)
 
     def create_turtle_canvas(self):
         self.action_canvas = tk.Canvas(
             self.turtle_frame,
-            width=self.turtle_frame_width,
-            height=self.turtle_frame_height,
+            width=800,
+            height=500,
         )
         self.action_canvas.pack()
         self.turtle_screen = turtle.TurtleScreen(self.action_canvas)
@@ -103,7 +104,7 @@ class Display:
 
         self.t.setheading(90)
         self.t.penup()
-        self.t.setpos(0, -0.4 * (self.turtle_frame_height))
+        self.t.setpos(0, -0.4 * (self.action_canvas.winfo_height()))
 
     def next_question(self):
         self.current_question += 1
