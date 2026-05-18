@@ -130,7 +130,7 @@ class Display:
     # assigns button to have turtle move left
     def move_left(self):
         self.t.left(90)
-        self.t.forward(50)
+        self.t.forward(75)
         self.t.right(90)
         save_answers("A")
         self.next_question()
@@ -138,13 +138,13 @@ class Display:
     # assigns button to have turtle move right
     def move_right(self):
         self.t.right(90)
-        self.t.forward(50)
+        self.t.forward(75)
         self.t.left(90)
         save_answers("C")
         self.next_question()
 
     # assigns button to have turtle move forward
     def move_forward(self):
-        self.t.forward(50)
+        self.t.forward(75)
         save_answers("B")
         self.next_question()
