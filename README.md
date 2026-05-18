@@ -70,4 +70,4 @@ In display.py:
 
 ## Testing
 
-Throughout the game, the user should be able to see a turtle, that is appearing to go through a forest. As the turtle reaches certain parts of the forest, it should be stopped, and given the choice between three choices, and should be able to smootly pick between the three choices. This should happen eight times throughout the game, and at the very end, the user should be shown a conclusion of which personality their choices line up with depending on their choices throughout the game.
+Throughout the game, the user should be able to see a turtle, that is appearing to go through a forest. As the turtle reaches certain parts of the forest, it should be stopped, and given the choice between three choices, and should be able to smootly pick between the three choices. This should happen sevenchan times throughout the game, and at the very end, the user should be shown a conclusion of which personality their choices line up with depending on their choices throughout the game.
