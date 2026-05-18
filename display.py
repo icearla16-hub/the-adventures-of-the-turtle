@@ -23,14 +23,14 @@ class Display:
 
     def init_window(self):
         self.root.title("The Adventures of the Turtle")
-        self.screen_size = (1000, 900)
+        self.screen_size = (1100, 700)
         self.root.geometry(f"{self.screen_size[0]}x{self.screen_size[1]}")
 
     def create_interface_frame(self):
         self.interface_frame = tk.Frame(
             self.root, width=800, height=(0.25 * self.screen_size[1])
         )
-        self.interface_frame.grid(row = 1, column = 0)
+        self.interface_frame.grid(row = 1, column = 0, )
 
     def create_buttons(self):
 
