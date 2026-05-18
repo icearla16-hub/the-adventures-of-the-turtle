@@ -25,11 +25,11 @@ Functions cover three major domains: making the Tkinter display, controlling the
 
 
 ## How do you run our project?
-Clone the repository with 'git clone https://github.com/icearla16-hub/the-adventures-of-the-turtle.git'. Run the main.py function using 'uv run python main.py'.
+Clone the repository with `git clone https://github.com/icearla16-hub/the-adventures-of-the-turtle.git`. After navigating to the repository on your device, open the game using `uv run python main.py`.
 
 
 ## Testing
-After executing 'uv run python main.py', users should see:
+After executing `uv run python main.py`, users should see:
 1. A Tkinter GUI with a Turtle in a forest, questions, and buttons.
 2. Questions should prompt the user to make a response with buttons labeled "Option A", "Option B", and "Option C".
 3. Upon making a response, the Turtle should move, and the next question is given.
