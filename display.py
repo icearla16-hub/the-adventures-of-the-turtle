@@ -3,6 +3,7 @@ import turtle
 from survey import get_question, get_answer_options, save_answers
 from counting import results
 
+# constants
 question_file = "questions.txt"
 answer_options_file = "answer_options.csv"
 answer_file = "responses.txt"
