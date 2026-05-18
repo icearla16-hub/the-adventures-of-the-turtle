@@ -33,7 +33,10 @@ class Display:
         self.interface_frame = tk.Frame(
             self.root, width=800, height=(0.25 * self.screen_size[1])
         )
-        self.interface_frame.grid(row = 1, column = 0, )
+        self.interface_frame.grid(
+            row=1,
+            column=0,
+        )
 
     # creating buttons + setting their dimensions and font
     def create_buttons(self):
@@ -41,19 +44,19 @@ class Display:
             self.interface_frame,
             text=question_list[self.current_question],
             font="Garamond 12",
-            wraplength = 750,
-            justify = "center",
-            anchor = "center"
+            wraplength=750,
+            justify="center",
+            anchor="center",
         )
-        self.text.grid(row=0, column =0, columnspan=3, sticky="ew", pady=(10, 5))
+        self.text.grid(row=0, column=0, columnspan=3, sticky="ew", pady=(10, 5))
 
         # setup of button to move turtle left
         self.a = tk.Button(
             self.interface_frame,
             text=answer_options_list[self.current_question][0],
             font="Garamond 12",
-            wraplength = 200,
-            justify = "center",
+            wraplength=200,
+            justify="center",
             width=30,
             height=5,
             command=self.move_left,
@@ -65,8 +68,8 @@ class Display:
             self.interface_frame,
             text=answer_options_list[self.current_question][1],
             font="Garamond 12",
-            wraplength = 200,
-            justify = "center",
+            wraplength=200,
+            justify="center",
             width=30,
             height=5,
             command=self.move_forward,
@@ -78,8 +81,8 @@ class Display:
             self.interface_frame,
             text=answer_options_list[self.current_question][2],
             font="Garamond 12",
-            wraplength = 200,
-            justify = "center",
+            wraplength=200,
+            justify="center",
             width=30,
             height=5,
             command=self.move_right,
@@ -107,7 +110,7 @@ class Display:
         )
         self.action_canvas.pack()
         self.turtle_screen = turtle.TurtleScreen(self.action_canvas)
-        self.turtle_screen.bgcolor("DarkGreen")
+        self.turtle_screen.bgpic("forest.gif")
         self.t = turtle.RawTurtle(self.turtle_screen)
 
         self.t.setheading(90)
@@ -118,15 +121,15 @@ class Display:
     def next_question(self):
         self.current_question += 1
         if self.current_question < len(question_list):
-            self.text.config(text = question_list[self.current_question])
-            self.a.config(text = answer_options_list[self.current_question][0])
-            self.b.config(text = answer_options_list[self.current_question][1])
-            self.c.config(text = answer_options_list[self.current_question][2])
+            self.text.config(text=question_list[self.current_question])
+            self.a.config(text=answer_options_list[self.current_question][0])
+            self.b.config(text=answer_options_list[self.current_question][1])
+            self.c.config(text=answer_options_list[self.current_question][2])
         else:
             self.a.grid_remove()
             self.b.grid_remove()
             self.c.grid_remove()
-            self.text.config(text = results())
+            self.text.config(text=results())
 
     # assigns button to have turtle move left
     def move_left(self):
