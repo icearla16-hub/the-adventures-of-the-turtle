@@ -23,7 +23,7 @@ class Display:
 
     def init_window(self):
         self.root.title("The Adventures of the Turtle")
-        self.screen_size = (1000, 1000)
+        self.screen_size = (1000, 900)
         self.root.geometry(f"{self.screen_size[0]}x{self.screen_size[1]}")
 
     def create_interface_frame(self):
