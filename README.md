@@ -58,9 +58,9 @@ and when they are put onto the buttons, one option will be displayed on each but
 This will require the following functions:
 
 In survey.py: 
-- get_questions(): Read the questions file. Display questions one-at-a-time when prompted.
-- get_answer_options(): Read the answer options file. Display options either on or above buttons in the interface frame, but do not indicate a, b, or c (those are just for our organization).
-- save_answers(): Add user responses to responses.txt.
+- get_questions(): Read the questions file, and saving each question.
+- get_answer_options(): Read the answer options file. Display options on buttons in the interface frame, but do not indicate a, b, or c (those are just for our organization).
+- save_answers(): save user responses to responses.txt.
 
 In counting.py:
 - Run through save_answers() to calculate how many of each choice was chosen, and assign the personality trait associated with their most chosen option.
