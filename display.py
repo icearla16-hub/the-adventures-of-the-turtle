@@ -30,44 +30,59 @@ class Display:
         self.interface_frame = tk.Frame(
             self.root, width=self.screen_size[0], height=(0.25 * self.screen_size[1])
         )
-        self.interface_frame.grid(row=1, column=0)
+        self.interface_frame.grid(row = 1, column = 0)
 
     def create_buttons(self):
+
+        self.text = tk.Label(
+            self.interface_frame,
+            text=question_list[self.current_question],
+            font="Garamond 12",
+            wraplength = 750,
+            justify = "center",
+            anchor = "center"
+        )
+        self.text.grid(row=0, column =0, columnspan=3, sticky="ew", pady=(10, 5))
 
         self.a = tk.Button(
             self.interface_frame,
             text=answer_options_list[self.current_question][0],
             font="Garamond 12",
+            wraplength = 200,
+            justify = "center",
+            width=30,
+            height=5,
             command=self.move_left,
         )
-        self.a.grid(row=0, column=0)
+        self.a.grid(row=1, column=0, sticky="ew", padx=10)
 
         self.b = tk.Button(
             self.interface_frame,
             text=answer_options_list[self.current_question][1],
             font="Garamond 12",
+            wraplength = 200,
+            justify = "center",
+            width=30,
+            height=5,
             command=self.move_forward,
         )
-        self.b.grid(row=0, column=1)
+        self.b.grid(row=1, column=1, sticky="ew", padx=10)
 
         self.c = tk.Button(
             self.interface_frame,
             text=answer_options_list[self.current_question][2],
             font="Garamond 12",
+            wraplength = 200,
+            justify = "center",
+            width=30,
+            height=5,
             command=self.move_right,
         )
-        self.c.grid(row=0, column=2)
-
-        self.text = tk.Label(
-            self.interface_frame,
-            text=str(ask_question(question_list, answer_options_list)),
-            font="Garamond 12",
-        )
-        self.text.grid(row=0, column=0)
+        self.c.grid(row=1, column=2, sticky="ew", padx=10)
 
     def create_turtle_frame(self):
-        self.turtle_frame_height = 0.75 * self.screen_size[1]
-        self.turtle_frame_width = self.screen_size[0]
+        self.turtle_frame_height = int(0.75 * self.screen_size[1])
+        self.turtle_frame_width = int(self.screen_size[0])
         self.turtle_frame = tk.Frame(
             self.root,
             width=self.turtle_frame_width,
@@ -105,20 +120,20 @@ class Display:
 
     def move_left(self):
         self.t.left(90)
-        self.t.forward(20)
+        self.t.forward(50)
         self.t.right(90)
         save_answers("A")
         self.next_question()
 
     def move_right(self):
         self.t.right(90)
-        self.t.forward(20)
+        self.t.forward(50)
         self.t.left(90)
         save_answers("C")
         self.next_question()
 
     def move_forward(self):
-        self.t.forward(20)
+        self.t.forward(50)
         save_answers("B")
         self.next_question()
 
