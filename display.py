@@ -21,19 +21,21 @@ class Display:
         self.create_turtle_canvas()
         self.create_buttons()
 
+    # creating the screen
     def init_window(self):
         self.root.title("The Adventures of the Turtle")
         self.screen_size = (1100, 700)
         self.root.geometry(f"{self.screen_size[0]}x{self.screen_size[1]}")
 
+    # creating the bottom panel for the buttons and to display the questions
     def create_interface_frame(self):
         self.interface_frame = tk.Frame(
             self.root, width=800, height=(0.25 * self.screen_size[1])
         )
         self.interface_frame.grid(row = 1, column = 0, )
 
+    # creating buttons + setting their dimensions and font
     def create_buttons(self):
-
         self.text = tk.Label(
             self.interface_frame,
             text=question_list[self.current_question],
@@ -44,6 +46,7 @@ class Display:
         )
         self.text.grid(row=0, column =0, columnspan=3, sticky="ew", pady=(10, 5))
 
+        # setup of button to move turtle left
         self.a = tk.Button(
             self.interface_frame,
             text=answer_options_list[self.current_question][0],
@@ -56,6 +59,7 @@ class Display:
         )
         self.a.grid(row=1, column=0, sticky="ew", padx=10)
 
+        # setup of button to move turtle forward
         self.b = tk.Button(
             self.interface_frame,
             text=answer_options_list[self.current_question][1],
@@ -68,6 +72,7 @@ class Display:
         )
         self.b.grid(row=1, column=1, sticky="ew", padx=10)
 
+        # setup of button to move turtle right
         self.c = tk.Button(
             self.interface_frame,
             text=answer_options_list[self.current_question][2],
@@ -80,6 +85,7 @@ class Display:
         )
         self.c.grid(row=1, column=2, sticky="ew", padx=10)
 
+    # frame for the turtle canvas to be created
     def create_turtle_frame(self):
         self.turtle_frame_height = int(0.75 * self.screen_size[1])
         self.turtle_frame_width = int(self.screen_size[0])
@@ -91,6 +97,7 @@ class Display:
 
         self.turtle_frame.grid(row=0, column=0)
 
+    # map that the turtle runs on + turtle
     def create_turtle_canvas(self):
         self.action_canvas = tk.Canvas(
             self.turtle_frame,
@@ -106,6 +113,7 @@ class Display:
         self.t.penup()
         self.t.setpos(0, -0.4 * (self.action_canvas.winfo_height()))
 
+    # showing the next questions + answer options, or calculating the final results
     def next_question(self):
         self.current_question += 1
         if self.current_question < len(question_list):
@@ -119,6 +127,7 @@ class Display:
             self.c.grid_remove()
             self.text.config(text = results())
 
+    # assigns button to have turtle move left
     def move_left(self):
         self.t.left(90)
         self.t.forward(50)
@@ -126,6 +135,7 @@ class Display:
         save_answers("A")
         self.next_question()
 
+    # assigns button to have turtle move right
     def move_right(self):
         self.t.right(90)
         self.t.forward(50)
@@ -133,13 +143,8 @@ class Display:
         save_answers("C")
         self.next_question()
 
+    # assigns button to have turtle move forward
     def move_forward(self):
         self.t.forward(50)
         save_answers("B")
         self.next_question()
-
-    def connect_keys(self):
-        self.turtle_screen.onkey(self.move_left, "Left")
-        self.turtle_screen.onkey(self.move_right, "Right")
-        self.turtle_screen.onkey(self.move_forward, "Up")
-        self.turtle_screen.listen()
