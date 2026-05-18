@@ -44,25 +44,29 @@ If we want to add complexity, we can make the Turtle's next move dependent on th
 Also, the Turtle should have a function to "sense" when it reaches a fork (i.e., when the spaces on either side are not occupied by a blockade) to prompt a question.
 
 ### 3. Reading and displaying text from separate files, organizing user inputs
-> NOTE: Homework 3 may be a helpful reference
 
-Import questions.txt and options.csv. The answer options will be formatted as follows:
+Import questions.txt and answer_options.csv. The answer options will be formatted as follows:
 
-    OPTION,a  
-    OPTION,b  
-    OPTION,c  
+    A: OPTION, B: OPTION C: OPTION  
 
-to allow for easy tallying of the user's responses. If the user chooses mostly a's, they receive end result A, and so on (see below).
+and when they are put onto the buttons, one option will be displayed on each button. If the user chooses mostly a's, they receive end result A, and so on (see below).
 
   - A - Despite the possibility of being harmed, you always choose to help.
   - B - You are a practical person who chooses to help when it does not hurt you, but you won't go out of your way to help.
   - C - You are a focused person, reliant on only your skills to reach your goals.
 
 This will require the following functions:
-- read_questions(): Read the questions file. Display questions one-at-a-time when prompted.
-- read_options(): Read the answer options file. Display options either on or above buttons in the interface frame, but do not indicate a, b, or c (those are just for our organization).
-- Add user responses to a .csv or list. Loop through and find the mode (maybe 1, 2, 3 is easier than a, b, c?), which will determine the final outcome.
-- Display the user's final outcome.
+
+In survey.py: 
+- get_questions(): Read the questions file. Display questions one-at-a-time when prompted.
+- get_answer_options(): Read the answer options file. Display options either on or above buttons in the interface frame, but do not indicate a, b, or c (those are just for our organization).
+- save_answers(): Add user responses to responses.txt.
+
+In counting.py:
+- Run through save_answers() to calculate how many of each choice was chosen, and assign the personality trait associated with their most chosen option.
+
+In display.py:
+- Call function from counting.py to display the results
 
 ## Testing
 
